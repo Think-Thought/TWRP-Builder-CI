@@ -6,7 +6,7 @@ env:
     DT_LINK: https://github.com/Think-Thought/RMX1851_TWRP.git -b master
     DT_PATH: device/$OEM/$DEVICE
 
-    # Cirrus Specific Vars (Do *NOT* Change)
+    ## Cirrus Specific Vars (Do *NOT* Change)
     CIRRUS_SHELL: bash
 
 task:
