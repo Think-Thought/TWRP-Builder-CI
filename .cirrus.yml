@@ -1,6 +1,6 @@
 ## Credit - https://github.com/Sushrut1101
 env:
-    MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12
+    MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
     DEVICE: RMX1851
     OEM: realme
     DT_LINK: https://github.com/Think-Thought/RMX1851_TWRP.git -b master
