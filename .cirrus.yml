@@ -5,8 +5,6 @@ env:
     OEM: realme
     DT_LINK: https://github.com/Think-Thought/RMX1851_TWRP.git -b master
     DT_PATH: device/$OEM/$DEVICE
-    TARGET: recoveryimage
-    LUNCH_COMBO: twrp_$Device-eng
     OUTPUT: recovery.img
 
     # Cirrus Specific Vars (Do *NOT* Change)
@@ -25,10 +23,7 @@ task:
       - repo sync -j$(nproc) --force-sync --no-clone-bundle --no-tags
       - repo sync --force-sync
       - git clone $DT_LINK $DT_PATH
-      - . build/envsetup.sh | bash
-      - export ALLOW_MISSING_DEPENDENCIES=true | bash
-      - lunch $LUNCH_COMBO | bash
-      - mka -j$(nproc) $TARGET | bash
+      - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/building.sh | bash
 
   Uploading_script:
       - cd out/target/product/"$DEVICE"
