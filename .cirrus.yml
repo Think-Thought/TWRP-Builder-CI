@@ -18,7 +18,7 @@ task:
       cpu: 8
       memory: 32G
 
-  clone_script:
+  Build_clone_script:
       - repo init -u $MANIFEST
       - repo sync -j$(nproc) --force-sync --no-clone-bundle --no-tags
       - repo sync --force-sync
@@ -26,15 +26,4 @@ task:
       - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/building.sh | bash
 
   Uploading_script:
-      - cd out/target/product/"$DEVICE"
-      - ls -lh
-      - pwd
-      - chmod 777 *
-      - curl --upload-file $(echo $OUTPUT) https://transfer.sh | tee link.txt && echo " "
-      - echo " "
-      - echo "============================"
-      - echo "Build Uploaded!"
-      - echo "Please see the link Below-  "
-      - echo "----------------------------"
-      - cat link.txt && echo " "
-      - echo "============================"
+      - curl -sL https://raw.githubusercontent.com/U89-sk/RecoveryBuilderCIScripts/main/uploading.sh | bash
