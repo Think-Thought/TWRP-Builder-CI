@@ -1,9 +1,9 @@
 ## Credit - https://github.com/Sushrut1101
 env:
-    MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11
+    MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12
     DEVICE: RMX1851
     OEM: realme
-    DT_LINK: https://github.com/Think-Thought/android_device_realme_RMX1851-twrp.git -b a11-RUI2
+    DT_LINK: https://github.com/Think-Thought/RMX1851_TWRP.git -b master
     DT_PATH: device/$OEM/$DEVICE
     TARGET: recoveryimage
     LUNCH_COMBO: twrp_$Device-eng
