@@ -18,7 +18,6 @@ task:
       memory: 32G
 
   Build_clone_script:
-      - ls
       - repo init -u $MANIFEST
       - repo sync -j$(nproc) --force-sync --no-clone-bundle --no-tags
       - repo sync --force-sync
